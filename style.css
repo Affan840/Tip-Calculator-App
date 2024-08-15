@@ -1,0 +1,234 @@
+@import url(https://fonts.googleapis.com/css?family=Space+Mono:regular,italic,700,700italic);
+
+:root {
+  --Strong-cyan: hsl(172, 67%, 45%);
+  --Very-dark-cyan: hsl(183, 100%, 15%);
+  --Dark-grayish-cyan: hsl(186, 14%, 43%);
+  --Grayish-cyan: hsl(184, 14%, 56%);
+  --Light-grayish-cyan: hsl(185, 41%, 84%);
+  --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --White: hsl(0, 0%, 100%);
+  --Red: rgb(222, 111, 111);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Space Mono", "Helvetica Neue";
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  background-color: var(--Light-grayish-cyan);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.active{
+  background-color: var(--Strong-cyan) !important;
+}
+
+button{
+    cursor: pointer;
+    font-family: "Space Mono", "Helvetica Neue";
+    font-weight: 800;
+    font-size: 18px;
+    border: none;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+main header h2 {
+  letter-spacing: 6px;
+  color: var(--Very-dark-cyan);
+  opacity: 0.8;
+}
+
+main #container {
+  display: flex;
+  align-items: center;
+  width: 750px;
+  gap: 40px;
+  background-color: var(--White);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+main #container form,
+main #container .result {
+    height: 100%;
+  width: 50%;
+}
+
+main #container form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+main #container form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+main #container form label {
+  color: var(--Dark-grayish-cyan);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+main #container form input {
+    cursor: pointer;
+  font-family: "Space Mono", "Helvetica Neue";
+  font-size: 20px;
+  font-weight: 800;
+  background-color: var(--Very-light-grayish-cyan);
+  color: var(--Very-dark-cyan);
+  text-align: right;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  padding: 10px;
+   background-repeat: no-repeat;
+    background-position:10px center;
+}
+
+main #container form input:focus{
+  box-shadow: inset 0 0 0 2px var(--Strong-cyan);
+}
+
+main #container form input::placeholder{
+      font-family: "Space Mono", "Helvetica Neue";
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--Grayish-cyan);
+}
+
+main #container form #bill{
+    background-image: url(images/icon-dollar.svg);
+}
+
+main #container form #people{
+    background-image: url(images/icon-person.svg);
+}
+
+main #container form .tip-options{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+main #container form .tip-options .tip-btn{
+  color: var(--White);
+    background-color: var(--Very-dark-cyan);
+        padding: 8px;
+    width: 100px;
+    font-size: 20px;
+}
+
+main #container form .tip-options .tip-btn:hover{
+      background-color: hsl(172, 73%, 72%);
+  color: var(--Very-dark-cyan);
+}
+
+main #container form .tip-options #custom-tip{
+    text-align: center;
+    padding: 8px;
+    width: 100px;
+}
+
+main #container form .no-of-people .people-label{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+main #container form .no-of-people .people-label .msg{
+  display: none;
+  color: var(--Red);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+main #container .result {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: var(--Very-dark-cyan);
+  color: var(--White);
+}
+
+main #container .result > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main #container .result > div h4 {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+main #container .result > div p {
+  color: var(--Grayish-cyan);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+main #container .result > div h1 {
+  font-size: 40px;
+  color: var(--Strong-cyan);
+}
+
+main #container .result button {
+  color: var(--Very-dark-cyan);
+  background-color: var(--Strong-cyan);
+  width: 100%;
+  margin-top: auto;
+}
+
+main #container .result button:hover{
+    background-color: hsl(172, 73%, 72%);
+}
+
+@media (max-width: 768px) {
+  main #container{
+    width: 320px;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  main #container form,
+main #container .result {
+    height: 100%;
+  width: 100%;
+}
+
+main #container form .tip-options .tip-btn {
+    width: 120px;
+}
+
+main #container .result > div h1 {
+    font-size: 28px;
+}
+}
